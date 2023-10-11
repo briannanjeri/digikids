@@ -1,0 +1,295 @@
+$custom-lg-device-seven: 'only screen and (min-width: 1200px)';
+$custom-lg-device-three: 'only screen and (min-width: 1750px)';
+$custom-lg-device-four: 'only screen and (min-width: 1800px)';
+$custom-lg-device-five: 'only screen and (min-width: 1900px)';
+
+$custom-lg-device-two: 'only screen and (min-width: 1401px) and (max-width: 1750px)';
+$custom-lg-device-six: 'only screen and (min-width: 1401px) and (max-width: 1650px)';
+$custom-lg-device-eight: 'only screen and (min-width: 1200px) and (max-width: 1450px)';
+
+$laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1599px)';
+$custom-laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1400px)';
+
+$extra-device: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
+$lg-layout: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md-layout: 'only screen and (min-width: 768px) and (max-width: 991px)';
+
+$lg-layout-1: 'only screen and (max-width: 1650px)';
+$smlg-device: 'only screen and (max-width: 1199px)';
+$md-layout-1: 'only screen and (max-width: 991px)';
+$sm-layout: 'only screen and (max-width: 767px)';
+$large-mobile: 'only screen and (max-width: 575px)';
+$small-mobile: 'only screen and (max-width: 479px)';
+
+.content {
+  border-top: 1px solid var(--color-border);
+  padding-top: 40px;
+  margin-bottom: -50px;
+
+  p {
+    margin: 0;
+  }
+
+  .courseOverview {
+    margin: 30px 0 0;
+    padding: 20px 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 10px;
+
+    .course {
+      border: 1px solid var(--color-border);
+      padding: 20px;
+      position: relative;
+      background-color: var(--bs-light);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: var(--transition);
+      min-height: 202px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &:hover {
+        scale: 1.05;
+      }
+
+      * {
+        z-index: 2;
+        transition: var(--transition);
+      }
+
+      a {
+        &:hover {
+          h6 {
+            color: var(--color-secondary);
+            text-decoration: underline var(--color-secondary);
+          }
+        }
+      }
+
+      .courseImage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        opacity: 0.05;
+        pointer-events: none;
+      }
+
+      .buttonsWrapper {
+        display: flex;
+        justify-content: space-between;
+
+        .courseDesc {
+          margin-bottom: 10px;
+        }
+
+        .courseLevel {
+          border-radius: 3px;
+          padding: 1px 10px;
+
+          &.advanced {
+            background-color: rgba(238, 74, 98, 0.2);
+            color: var(--color-secondary);
+          }
+
+          &.beginner {
+            background-color: rgba(74, 238, 126, 0.2);
+            color: #198754;
+          }
+
+          &.intermediate {
+            background-color: rgba(74, 144, 238, 0.2);
+            color: #0d6efd;
+          }
+        }
+
+        .courseAge,
+        .readMore {
+          display: inline-block;
+          background-color: rgb(248 184 31 / 53%);
+          font-size: 13px;
+          font-weight: 500;
+          color: black;
+          border-radius: 3px;
+          padding: 1px 10px;
+          height: fit-content;
+        }
+
+        .readMore {
+          border: none;
+          background-color: var(--color-primary);
+          color: white;
+          line-height: var(--line-height-b1);
+          transition: var(--transition);
+
+          &:hover {
+            background-color: var(--color-secondary);
+          }
+        }
+      }
+
+      @media #{$sm-layout} {
+        .buttonsWrapper {
+          flex-direction: column;
+          align-items: flex-start;
+
+          .levelAgeWrapper {
+            display: flex;
+
+            .courseLevel,
+            .courseAge {
+              margin-right: 30px;
+              text-align: center;
+              width: 120px;
+              height: auto;
+            }
+          }
+
+          .readMore {
+            margin-top: 10px;
+            align-self: flex-start;
+          }
+        }
+      }
+    }
+
+    @media #{$smlg-device} {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media #{$lg-layout} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media #{$md-layout} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media #{$sm-layout} {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .register {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 30px 0;
+    padding: 20px 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+
+    @media #{$sm-layout} {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .countdown {
+      display: flex;
+
+      @media #{$sm-layout} {
+        justify-content: center;
+      }
+
+      .countdownSection {
+        margin-right: 10px;
+        text-align: center;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .countdownNumber {
+        font-size: 20px;
+        font-weight: var(--p-semi-bold);
+        line-height: 1;
+        margin-bottom: 10px;
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 50%;
+
+        &.day {
+          background-color: rgba(26, 182, 157, 0.1);
+          color: var(--color-primary);
+        }
+
+        &.hour {
+          background-color: rgba(238, 74, 98, 0.1);
+          color: var(--color-secondary);
+        }
+
+        &.minute {
+          background-color: rgba(142, 86, 255, 0.1);
+          color: var(--color-extra02);
+        }
+
+        &.second {
+          background-color: rgba(248, 148, 31, 0.1);
+          color: var(--color-extra05);
+        }
+      }
+
+      .countdownUnit {
+        line-height: 1;
+        font-size: 15px;
+        font-weight: var(--p-medium);
+        color: var(--color-body);
+      }
+    }
+
+    .registerButton {
+      width: 60%;
+      border-radius: 200px;
+      border: none;
+      height: 85px;
+      font-size: 22px;
+      transition: var(--transition);
+      line-height: 85px;
+
+      &:hover {
+        scale: 1.05;
+        font-size: 25px;
+      }
+
+      @media #{$sm-layout} {
+        width: 100%;
+      }
+    }
+  }
+
+  .courseList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 30px;
+      position: relative;
+
+      &:after {
+        content: '\e938';
+        font-family: var(--font-icomoon);
+        color: var(--color-primary);
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: var(--transition);
+      }
+    }
+  }
+}

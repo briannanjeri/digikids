@@ -1,0 +1,6 @@
+export * from './courseCards'
+export * from './courses-list'
+export * from './faq'
+export * from './register'
+export * from './seo'
+export * from './terms-condition'

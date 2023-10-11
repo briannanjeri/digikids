@@ -1,0 +1,36 @@
+export const counter_data = [
+  {
+    color: 'primary-color',
+    count: 12.3,
+    icon: '48',
+    text: 'K',
+    title: 'Student Enrolled',
+    decimal: 1,
+    border_none: '',
+  },
+  {
+    color: 'secondary-color',
+    count: 700,
+    icon: '47',
+    text: '',
+    title: 'Class Completed',
+    decimal: 1,
+    border_none: '',
+  },
+  {
+    color: 'extra08-color',
+    count: 99,
+    icon: '49',
+    text: '%',
+    title: 'Satisfaction Rate',
+    border_none: '',
+  },
+  {
+    color: 'extra05-color',
+    count: 14,
+    icon: '50',
+    text: '',
+    title: 'Top Instructors',
+    border_none: '',
+  },
+]
