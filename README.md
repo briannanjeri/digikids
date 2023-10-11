@@ -1,3 +1,5 @@
+#copyright by castynet studios
+
 # Digikids Mono Repo
 
 This is the mono repo for the Digikids project. It contains the following sub projects:
